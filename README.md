@@ -1,7 +1,7 @@
 # TeamProject.20
 
-Frances Sheridan
-Fsheridan@ncirl.ie
+Frances Sheridan <br>
+Fsheridan@ncirl.ie <br>
 https://mymoodle.ncirl.ie/course/view.php?id=198
 
 Review at week 6 and 11
