@@ -13,4 +13,8 @@ Final project submission + presentation - 70% <br>
 Collaboration and Progress - 10%!
 
 
-NFC READER 
+NFC APP 
+
+access the NFC reader hardware (1),
+read data from an NFC tag(2), 
+perform any desired processing or storage of that data(3)
