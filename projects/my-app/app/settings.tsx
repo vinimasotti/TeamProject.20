@@ -1,16 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import { Platform, StyleSheet } from 'react-native';
-
+//setings screen
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
-export default function ModalScreen() {
+//change this function to settings screen
+export default function ModalSettings() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>About us</Text>
+      <Text style={styles.title}>Settings</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <EditScreenInfo path="app/modal.tsx" />
-      <Text>Group 20 of Team Project at National  <br></br>College of Ireland 2022-2023 </Text>
+      <Text> ADD CODE HERE</Text>
 
       {/* Use a light status bar on iOS to account for the black space above the modal */}
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />

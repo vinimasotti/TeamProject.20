@@ -1,17 +1,21 @@
 import { StyleSheet } from 'react-native';
+//exactly the copy of three
 
 import EditScreenInfo from '../../components/EditScreenInfo';
 import { Text, View } from '../../components/Themed';
 
-export default function TabTwoScreen() {
+export default function TabThreeScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Dashboard</Text>
+      <Text style={styles.title}>Train Time</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/two.tsx" />
+      <EditScreenInfo path="app/(tabs)/four.tsx" />
+      <Text > Insert here  TRAIN NTA API  </Text>
+
     </View>
   );
 }
+//
 
 
 const styles = StyleSheet.create({

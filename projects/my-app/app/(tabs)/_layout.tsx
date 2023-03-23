@@ -3,6 +3,7 @@ import { Link, Tabs } from 'expo-router';
 import { Pressable, useColorScheme } from 'react-native';
 
 import Colors from '../../constants/Colors';
+import { Ionicons,FontAwesome5 } from '@expo/vector-icons'; 
 
 
 /**
@@ -26,8 +27,8 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Login Screen',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Welcome',
+          tabBarIcon: ({ color }) => <Ionicons name="ios-bookmarks" size={24} color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
@@ -47,15 +48,52 @@ export default function TabLayout() {
       <Tabs.Screen
         name="two"
         options={{
-          title: 'Dashboard',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Home',
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color}  />,
+          headerRight: () => (
+            <Link href="/modal" asChild>
+              <Pressable>
+                {({ pressed }) => (
+                  <FontAwesome
+                    name="info-circle"
+                    size={25}
+                    color={Colors[colorScheme ?? 'light'].text}
+                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
+                  />
+                )}
+              </Pressable>
+            </Link>
+          ),
+          
+          headerLeft: () => (
+            <Link href="/settings" asChild>
+              <Pressable>
+                {({ pressed }) => (
+                  <FontAwesome5
+                    name="tools"
+                    size={20}
+                    color={Colors[colorScheme ?? 'light'].text}
+                    style={{ marginLeft: 15, opacity: pressed ? 0.5 : 1 }}
+                  />
+                )}
+              </Pressable>
+            </Link>
+          ),
         }}
         />
         <Tabs.Screen
         name="three"
         options={{
-          title: 'Three',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Bus Time',
+          tabBarIcon: ({ color }) => <Ionicons name="ios-bus-sharp" size={30} color={color} />,
+        }}
+      />
+      
+        <Tabs.Screen
+        name="four"
+        options={{
+          title: 'Train Time',
+          tabBarIcon: ({ color }) => <Ionicons name="ios-train-sharp" size={30} color={color} />,
         }}
       />
     </Tabs>
