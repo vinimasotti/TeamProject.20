@@ -10,7 +10,7 @@ export default function ModalScreen() {
       <Text style={styles.title}>About us</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <EditScreenInfo path="app/modal.tsx" />
-      <Text>Group 20 of Team Project at National  <br></br>College of Ireland 2022-2023 </Text>
+      <Text>Group 20 of Team Project at National  College of Ireland 2022-2023 </Text>
 
       {/* Use a light status bar on iOS to account for the black space above the modal */}
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
