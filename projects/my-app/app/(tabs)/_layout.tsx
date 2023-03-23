@@ -96,7 +96,19 @@ export default function TabLayout() {
         options={{
           title: 'Train Time',
           tabBarIcon: ({ color }) => <Ionicons name="ios-train-sharp" size={30} color={color} />,
+          
         }}
+        
+      />
+
+      <Tabs.Screen
+        name="five"
+        options={{
+          title: 'Test page',
+          tabBarIcon: ({ color }) => <FontAwesome name="bug" size={30} color={color} />,
+          
+        }}
+        
       />
     </Tabs>
   );
