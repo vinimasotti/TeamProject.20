@@ -1,73 +1,37 @@
-import React, {useRef, useState} from 'react';
-import {
-  Button,
-  DrawerLayoutAndroid,
-  Text,
-  StyleSheet,
-  View,
-} from 'react-native';
+import React from 'react';
+import {SafeAreaView, StyleSheet, TextInput} from 'react-native';
 
-const App = () => {
-  const drawer = useRef<DrawerLayoutAndroid>(null);
-  const [drawerPosition, setDrawerPosition] = useState<'left' | 'right'>(
-    'left',
-  );
-  const changeDrawerPosition = () => {
-    if (drawerPosition === 'left') {
-      setDrawerPosition('right');
-    } else {
-      setDrawerPosition('left');
-    }
-  };
+function App(){
+  fetch('https://api.nationaltransport.ie/gtfsr/v2/gtfsr?format=json', {
+        method: 'GET',
+        // Request headers
+        headers: {
+            'Cache-Control': 'no-cache',
+            'x-api-key': '••••••••••••••••••••••••••••••••',}
+    })
+    .then(response => {
+        console.log(response.status);
+        console.log(response.text());
+    })
+    .catch(err => console.error(err));
+ return 
 
-  const navigationView = () => (
-    <View style={[styles.container, styles.navigationContainer]}>
-      <Text style={styles.paragraph}>I'm in the Drawer!</Text>
-      <Button
-        title="Close drawer"
-        onPress={() => drawer.current?.closeDrawer()}
-      />
-    </View>
-  );
-
-  return (
-    <DrawerLayoutAndroid
-      ref={drawer}
-      drawerWidth={300}
-      drawerPosition={drawerPosition}
-      renderNavigationView={navigationView}>
-      <View style={styles.container}>
-        <Text style={styles.paragraph}>Drawer on the {drawerPosition}!</Text>
-        <Button
-          title="Change Drawer Position"
-          onPress={() => changeDrawerPosition()}
-        />
-        <Text style={styles.paragraph}>
-          Swipe from the side or press button below to see it!
-        </Text>
-        <Button
-          title="Open drawer"
-          onPress={() => drawer.current?.openDrawer()}
-        />
-      </View>
-    </DrawerLayoutAndroid>
-  );
+ /*const button = document.createElement("button");
+ button.textContent = "Click me!";
+ button.type = "button";
+ button.addEventListener("click", () => {
+  console.log("Button clicked!")
+  document.body.appendChild(button)*/
 };
 
+
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 16,
-  },
-  navigationContainer: {
-    backgroundColor: '#ecf0f1',
-  },
-  paragraph: {
-    padding: 16,
-    fontSize: 15,
-    textAlign: 'center',
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
   },
 });
 

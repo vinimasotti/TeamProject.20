@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+//wasnt change anything
+
 import EditScreenInfo from '../../components/EditScreenInfo';
 import { Text, View } from '../../components/Themed';
 
