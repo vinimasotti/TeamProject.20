@@ -13,8 +13,8 @@ export default function ModalSettings() {
       <EditScreenInfo path="app/seettings.tsx" />
       <Text> NEWS LETTER </Text>
       <Text>NOTIFICATIONS</Text>
+      <Text>LOGOUT BUTTON</Text>
       <Text>DELETE ACCOUNT</Text>
-      <Text>LOGOUT</Text>
 
       {/* Use a light status bar on iOS to account for the black space above the modal */}
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
