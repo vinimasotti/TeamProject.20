@@ -1,18 +1,19 @@
-<h1>Login</h1>
-<% if (messages.error){ %>
-  <%= messages.error %>
-  <%%
-<form action = "/login" method = "POST">
- 
-   <label for=" email"> Email </label>
-    <input type = "email" id = "name" name "name" required>
-  </div>
-<div><br>
-    <label for=" password"> Password </label>
-    <input type = "password" id = "name" name "name" required><br>
-    <div>
-    <button type = "submit">Login</button>
-    </div>
+
+
+<div class="container mt-5">
+    <a href="index.ejs" class="button">Go Back</a>
+    <h1>Login</h1>
+    <form action="/login" method="POST">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted"></small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </div>
-</form>
-<a href="/register">Register</a> 
+
